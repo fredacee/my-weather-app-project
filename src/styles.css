@@ -34,14 +34,13 @@ li {
   font-weight: 100px;
   height: 19px;
   list-style: none;
-  text-align: center;
+  text-align: right;
 }
 
 .weather-icon {
   height: 64px;
   width: 64px;
-  margin-right: 10px, 10px;
-  margin-bottom: 20px;
+  margin-right: 10px;
 }
 
 .temperature {

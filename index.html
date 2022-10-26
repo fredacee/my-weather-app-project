@@ -16,9 +16,10 @@
   </head>
   <body>
 <div class="container">
+  <div class="weather-app-wrapper">
         <form class="search form">
           <div class="row">
-            <div class="col-6">
+            <div class="col-9">
             <input type="search"placeholder="Enter a city.."
             autofocus="on"
             autocomplete="off"
@@ -29,31 +30,23 @@
               <input type="submit" value="search"
               class="form-control btn btn-primary" />
               </div>
-              <div class="col-3">
-                <button class="btn btn-sucess" id="current-location-button">
-                  Current
-                  </button>
-              </div>
           </div>
           </form>
-          <h1>
-            Hosted with 
-            <a href="https://www.netlify.com">Netlify</a>
-          </h1>
           <h1 Porto-Novo id ="city">
     </h1>
     <h2>   
     <span id="date"></span>
         <p id="description"></p>
             </br>
+            <div class="d-flex weather-temperature"></div>
+           <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy" class="float-left"  />
          <span class="temperature"  id="temperature"> 28</span>
          <span class="units"><a id="celcius">℃ |
          <a id="fahrenheit">℉</span>
+         </div>
                  </h2>
                <div class="col-6">
                  <ul>
-                   <li>
-                   </li>
                    <li>
                        Humidity: <span id="humidity"></span>%
                    </li>
@@ -110,13 +103,17 @@ Mon
   <img src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png" alt="cloudy-icon"/>
 </br>
 30°
-  </div>
 </div>
 </div>
- <script src="src/index.js"></script>
-</body>
+</div>
+</div>
+<script src="src/index.js"></script>
+<footer>
  <p id="code-tag">
    <a href="https://github.com/fredacee/my-weather-app-project">Open Source Code </a>
-   by Winifred Ayaga
+   by Winifred Ayaga 
+   Hosted with <a href="https://www.netlify.com">Netlify</a>  
  </p>
+ </footer>
+</body>
 </html>

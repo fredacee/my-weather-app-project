@@ -1,4 +1,5 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = newDate(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;

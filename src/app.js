@@ -16,7 +16,7 @@ function formateDate(timestamp) {
     "Tuesday",
     "Wednesday",
     "Thursday",
-    "Fridy",
+    "Friday",
     "Saturday",
   ];
   let day = days[date.getDay()];
@@ -47,9 +47,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "526c5482745c7f74e3d6117a5b1a2c31";
-let city = "Porto-Novo";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?
-q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "526c5482745c7f74e3d6117a5b1a2c31";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Porto-Novo");
+
+let form = document.querySelector("search-form");
+search, addEventListener("submit", handleSubmit);
